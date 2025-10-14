@@ -3,77 +3,71 @@ import GroupFooterNav from "../blocks/GroupFooterNav.astro";
 import Container from "../shared/Container.astro";
 import FooterNav from "../shared/FooterNav.astro";
 import Paragraph from "../shared/Paragraph.astro";
-const footerNav1 = [
-    {
-        itemText:"Marketing",
-        itemLink:"#"
-    },
-    {
-        itemText:"Analylitics",
-        itemLink:"#"
-    },
-    {
-        itemText:"Commerce",
-        itemLink:"#"
-    },
-    {
-        itemText:"Insights",
-        itemLink:"#"
-    }
-]
 
-const footerSupport = [
-    {
-        itemText:"Pricing",
-        itemLink:"#"
-    },
-    {
-        itemText:"Guides",
-        itemLink:"#"
-    },
-    {
-        itemText:"FAQ",
-        itemLink:"#"
-    },
-    {
-        itemText:"Contact",
-        itemLink:"#"
-    }
-]
-
+// Coluna "O Instituto"
 const footerCompany = [
     {
-        itemText:"About",
-        itemLink:"/about"
+        itemText:"Sobre Nós",
+        itemLink:"#sobre-nos"
+    },
+    {
+        itemText:"Projetos",
+        itemLink:"#projetos"
     },
     {
         itemText:"Blog",
         itemLink:"#"
     },
     {
-        itemText:"Jobs",
+        itemText:"Contato",
+        itemLink:"#contato"
+    }
+]
+
+// Coluna "Nossas Frentes"
+const footerSolutions = [
+    {
+        itemText:"Cultura",
         itemLink:"#"
     },
     {
-        itemText:"Parteners",
+        itemText:"Esporte",
         itemLink:"#"
     },
     {
-        itemText:"Jobs",
+        itemText:"Educação",
+        itemLink:"#"
+    },
+    {
+        itemText:"Direitos Sociais",
         itemLink:"#"
     }
 ]
-const footerLegal = [
+
+// Coluna "Participe"
+const footerSupport = [
     {
-        itemText:"Claim",
-        itemLink:"/#"
-    },
-    {
-        itemText:"Privacy",
+        itemText:"Seja um Doador",
         itemLink:"#"
     },
     {
-        itemText:"Terms",
+        itemText:"Voluntariado",
+        itemLink:"#"
+    },
+    {
+        itemText:"Parcerias",
+        itemLink:"#"
+    }
+]
+
+// Coluna "Legal"
+const footerLegal = [
+    {
+        itemText:"Política de Privacidade",
+        itemLink:"#"
+    },
+    {
+        itemText:"Termos de Uso",
         itemLink:"#"
     }
 ]
@@ -114,22 +108,22 @@ const footerLegal = [
             <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
                 <div class="h-full">
                     <a href="#" class="relative flex items-center gap-3">
-                        <div class="relative w-7 h-7 overflow-auto flex rounded-xl">
+                        <div class="relative w-7 h-7 overflow-hidden flex rounded-xl">
                             <span class="absolute w-4 h-4 -top-1 -right-1 bg-green-500 rounded-md rotate-45"></span>
                             <span class="absolute w-4 h-4 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"></span>
                             <span class="absolute w-4 h-4 -bottom-1 -left-1 bg-primary rounded-md rotate-45"></span>
                             <span class="absolute w-2 h-2 rounded-full bg-heading-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
                         </div>
                         <div class="inline-flex text-lg font-semibold text-heading-1">
-                            AgenceX
+                            IIP - Instituto Inspirar e Produzir
                         </div>
                     </a>
                     <Paragraph className={"mt-8"}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, maiores nam doloribus id magni
+                        Inspirando e produzindo um futuro mais justo através da cultura e do esporte.
                     </Paragraph>
                 </div>
 
-                <!-- social links -->
+                {/* social links */}
                 <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
                     <a href="#" class="transition hover:text-heading-1 hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
@@ -162,13 +156,13 @@ const footerLegal = [
             </div>
 
             <GroupFooterNav>
-                <FooterNav title={"Company"} navItems={footerCompany}/>
-                <FooterNav title={"Solutions"} navItems={footerNav1}/>
+                <FooterNav title={"O Instituto"} navItems={footerCompany}/>
+                <FooterNav title={"Nossas Frentes"} navItems={footerSolutions}/>
             </GroupFooterNav>
 
             <GroupFooterNav>
-                <FooterNav title={"Support"} navItems={footerSupport}/>
-                <FooterNav title={"Ressources"} navItems={footerLegal}/>
+                <FooterNav title={"Participe"} navItems={footerSupport}/>
+                <FooterNav title={"Legal"} navItems={footerLegal}/>
             </GroupFooterNav>
 
         </div>
@@ -177,10 +171,10 @@ const footerLegal = [
         <Container>
             <div class="flex justify-between items-center gap-6 md:text-lg text-heading-3">
                 <div>
-                    &copy; <span id="year"></span> AgenceX. All right reserved
+                    &copy; <span id="year"></span> IIP - Instituto Inspirar e Produzir. Todos os direitos reservados
                 </div>
                 <div>
-                    Proudly made by <a href="https://github.com/johnkat-mj" target="_blank" class="font-semibold">John Kat</a>
+                    Desenvolvido por <a href="#" target="_blank" class="font-semibold">AkTech</a>
                 </div>
             </div>
         </Container>
