@@ -36,14 +36,8 @@ const { title } = Astro.props;
       "[data-switch-theme]",
     ) as HTMLButtonElement;
 
-    if (
-      localStorage.getItem("appTheme") === "dark" ||
-      (!("appTheme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+    if (localStorage.getItem("appTheme") !== 'light') {
+        document.documentElement.classList.add("dark");
     }
     if (switchTheme) {
       switchTheme.addEventListener("click", (e) => {
@@ -113,7 +107,7 @@ const { title } = Astro.props;
 </html>
 <style is:global>
   :root {
-    --color-bg: 255 255 255;
+    --color-bg: 243 244 246;
     --color-border: 255 255 255;
     --color-box: 255 255 255;
     --box-border: 229 231 235;
