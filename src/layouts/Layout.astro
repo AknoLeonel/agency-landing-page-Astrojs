@@ -40,17 +40,16 @@ const {
     />
 
     <script is:inline>
-      // Verifica o tema imediatamente antes de renderizar o corpo
       const getTheme = () => {
+        // 1. Se o usuário já visitou e escolheu um tema, respeita a memória
         if (typeof localStorage !== 'undefined' && localStorage.getItem('appTheme')) {
           return localStorage.getItem('appTheme');
         }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark';
-        }
-        return 'light';
+        // 2. Se é a primeira vez (ou não tem memória), retorna 'dark' como padrão
+        return 'dark';
       };
 
+      // Aplica a classe 'dark' se necessário
       if (getTheme() === 'dark') {
         document.documentElement.classList.add('dark');
       } else {
